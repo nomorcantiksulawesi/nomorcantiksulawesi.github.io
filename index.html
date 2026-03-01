@@ -6,6 +6,7 @@
 <title>Nomor Cantik Sulawesi</title>
 
 <style>
+
 body {
     font-family: Arial, sans-serif;
     background: #0b0b0b;
@@ -22,6 +23,21 @@ header {
     color: gold;
 }
 
+.search-box {
+    padding: 15px;
+    text-align: center;
+    background: #111;
+}
+
+.search-box input {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid gold;
+}
+
 .container {
     padding: 20px;
 }
@@ -32,6 +48,11 @@ header {
     margin: 10px 0;
     border-radius: 10px;
     border: 1px solid gold;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .number {
@@ -42,7 +63,6 @@ header {
 
 .price {
     color: #00ff88;
-    margin-top: 5px;
 }
 
 .btn {
@@ -55,16 +75,12 @@ header {
     border-radius: 5px;
 }
 
-.btn:hover {
-    background: #1ebe5d;
-}
-
 footer {
     text-align: center;
     padding: 15px;
     background: black;
-    margin-top: 20px;
 }
+
 </style>
 
 </head>
@@ -74,9 +90,13 @@ footer {
 NOMOR CANTIK SULAWESI
 </header>
 
-<div class="container">
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Cari nomor (contoh: 3333, 5943, 0812)" onkeyup="searchNumber()">
+</div>
 
-<!-- NOMOR LIST -->
+<div class="container" id="container">
+
+<!-- LIST NOMOR -->
 
 <div class="card">
 <div class="number">0812-3333-5943</div>
@@ -91,104 +111,80 @@ NOMOR CANTIK SULAWESI
 </div>
 
 <div class="card">
+<div class="number">0812-8888-5531</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="number">0822-8888-5531</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="number">0822-8888-5536</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="number">0822-8888-5529</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="number">0822-8888-5564</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
+<div class="number">0822-8888-5504</div>
+<div class="price">Rp 400.000</div>
+<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
+</div>
+
+<div class="card">
 <div class="number">0812-3333-5784</div>
 <div class="price">Rp 200.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-5840</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9854</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-5921</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9851</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-8946</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9852</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-9435</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9841</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-9584</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9842</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
-<div class="number">0812-3333-9205</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9162</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9074</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9254</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9146</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9631</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-9274</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0821-3333-6849</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-8940</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-7062</div>
-<div class="price">Rp 200.000</div>
-<a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
-</div>
-
-<div class="card">
-<div class="number">0812-3333-7652</div>
-<div class="price">Rp 200.000</div>
+<div class="number">0822-7777-9843</div>
+<div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
@@ -200,9 +196,57 @@ NOMOR CANTIK SULAWESI
 
 </div>
 
-<footer>
-WhatsApp: 0858-5555-0987
 </footer>
+
+<script>
+
+function searchNumber() {
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let container = document.getElementById("container");
+
+let cards = Array.from(container.getElementsByClassName("card"));
+
+cards.sort((a, b) => {
+
+let textA = a.innerText.toLowerCase();
+let textB = b.innerText.toLowerCase();
+
+let matchA = textA.includes(input);
+let matchB = textB.includes(input);
+
+if (matchA && !matchB) return -1;
+if (!matchA && matchB) return 1;
+return 0;
+
+});
+
+container.innerHTML = "";
+
+cards.forEach(card => {
+
+let text = card.innerText.toLowerCase();
+
+if (text.includes(input) || input === "") {
+
+card.style.display = "block";
+
+} else {
+
+card.style.display = "none";
+
+}
+
+container.appendChild(card);
+
+});
+
+}
+
+</script>
 
 </body>
 </html>
+
+
