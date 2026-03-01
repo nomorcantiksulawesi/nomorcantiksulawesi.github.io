@@ -13,6 +13,43 @@ body {
     color: white;
     margin: 0;
 }
+#totalStock {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 15px auto;
+    color:white
+}
+.wa-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 999;
+
+    animation: kedipWA 2s infinite;
+}
+
+/* animasi kedip */
+@keyframes kedipWA {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 5px #25D366;
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px #25D366;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 5px #25D366;
+    }
+}
 
 header {
     background: black;
@@ -80,7 +117,28 @@ footer {
     padding: 15px;
     background: black;
 }
+.highlight {
+    color: #ff0000; /* merah darah terang */
+    font-weight: bold;
+    text-shadow: 0 0 2px rgba(255, 0, 0, 0.4);
+}
+.filter-container {
+    text-align: center;
+    margin-top: 10px;
+}
 
+.filter-btn {
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 5px;
+    cursor: pointer;
+}.filter-btn:hover {
+    background: gold;
+    color: black;
+}
 </style>
 
 </head>
@@ -91,104 +149,130 @@ NOMOR CANTIK SULAWESI
 </header>
 
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Cari nomor (contoh: 3333, 5943, 0812)" onkeyup="searchNumber()">
-</div>
+<input type="text" id="searchInput" placeholder="Cari nomor (contoh: 0822, 7777, 8888, 9999)" onkeyup="searchNumber()">
+<br><br>
 
+<button onclick="sortPrice('murah')" class="filter-btn">
+Termurah
+</button>
+
+<button onclick="sortPrice('mahal')" class="filter-btn">
+Termahal
+</button>
+
+</div>
+<div class="stock" id="totalStock">Tersedia: 0 nomor</div>
 <div class="container" id="container">
 
 <!-- LIST NOMOR -->
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0812-3333-5943</div>
 <div class="price">Rp 200.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0812-3333-5934</div>
 <div class="price">Rp 200.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0812-8888-5531</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-8888-5531</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-8888-5536</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-8888-5529</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-8888-5564</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-8888-5504</div>
 <div class="price">Rp 400.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0812-3333-5784</div>
 <div class="price">Rp 200.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9854</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9851</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9852</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9841</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9842</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0822-7777-9843</div>
 <div class="price">Rp 250.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
 </div>
 
 <div class="card">
+<div class="operator-name">TELKOMSEL</div>
 <div class="number">0812-3333-7835</div>
 <div class="price">Rp 200.000</div>
 <a class="btn" href="https://wa.me/6285855550987">Beli via WhatsApp</a>
@@ -204,49 +288,91 @@ function searchNumber() {
 
 let input = document.getElementById("searchInput").value.toLowerCase();
 
-let container = document.getElementById("container");
-
-let cards = Array.from(container.getElementsByClassName("card"));
-
-cards.sort((a, b) => {
-
-let textA = a.innerText.toLowerCase();
-let textB = b.innerText.toLowerCase();
-
-let matchA = textA.includes(input);
-let matchB = textB.includes(input);
-
-if (matchA && !matchB) return -1;
-if (!matchA && matchB) return 1;
-return 0;
-
-});
-
-container.innerHTML = "";
+let cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
 
-let text = card.innerText.toLowerCase();
+let numberDiv = card.querySelector(".number");
 
-if (text.includes(input) || input === "") {
+let original = numberDiv.innerText;
+
+let text = original.toLowerCase();
+
+if (input !== "" && text.includes(input)) {
+
+let regex = new RegExp("(" + input + ")", "gi");
+
+numberDiv.innerHTML = original.replace(regex, '<span class="highlight">$1</span>');
 
 card.style.display = "block";
 
 } else {
 
+numberDiv.innerHTML = original;
+
+if (input === "") {
+card.style.display = "block";
+} else {
 card.style.display = "none";
+}
 
 }
 
-container.appendChild(card);
+});
 
+}
+function sortPrice(order) {
+
+let container = document.getElementById("container");
+
+let cards = Array.from(container.getElementsByClassName("card"));
+
+cards.sort(function(a, b) {
+
+let priceA = parseInt(a.querySelector(".price").innerText.replace(/\D/g, ""));
+
+let priceB = parseInt(b.querySelector(".price").innerText.replace(/\D/g, ""));
+
+if (order === "murah") {
+return priceA - priceB;
+} else {
+return priceB - priceA;
+}
+
+});
+
+container.innerHTML = "";
+
+cards.forEach(function(card) {
+container.appendChild(card);
 });
 
 }
 
 </script>
+</script>
+
+<a href="https://wa.me/6285855550987" class="wa-float" target="_blank">
+Chat Admin
+</a>
+
+<script>
+
+function updateStockCount() {
+
+    let cards = document.querySelectorAll(".card");
+
+    let total = cards.length;
+
+    document.getElementById("totalStock").innerText =
+        "Tersedia: " + total + " nomor";
+
+}
+
+/* jalankan saat halaman dibuka */
+updateStockCount();
+
+</script>
 
 </body>
 </html>
-
-
