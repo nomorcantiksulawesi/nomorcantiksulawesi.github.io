@@ -497,15 +497,25 @@ updateStockCount();
 </script>
 
 <script>
-fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi.github.io/visits")
-.then(res => res.json())
-.then(res => {
-    document.getElementById("visitorCount").innerText =
-        "Pengunjung: " + res.value + " orang";
-})
-.catch(() => {
-    document.getElementById("visitorCount").innerText =
-        "Pengunjung: 0 orang";
+document.addEventListener("DOMContentLoaded", function() {
+
+  fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi/visits")
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    var el = document.getElementById("visitorCount");
+    if(el){
+      el.innerText = "Pengunjung: " + data.value + " orang";
+    }
+  })
+  .catch(function(){
+    var el = document.getElementById("visitorCount");
+    if(el){
+      el.innerText = "Pengunjung: 0 orang";
+    }
+  });
+
 });
 </script>
 
