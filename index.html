@@ -162,6 +162,9 @@ Termahal
 
 </div>
 <div class="stock" id="totalStock">Tersedia: 0 nomor</div>
+<div id="visitorCount" style="text-align:center; margin-bottom:15px;">
+Pengunjung: loading...
+</div>
 <div class="container" id="container">
 
 <!-- LIST NOMOR -->
@@ -490,6 +493,22 @@ function updateStockCount() {
 
 /* jalankan saat halaman dibuka */
 updateStockCount();
+<script>
+
+<script>
+function updateVisitorCount() {
+
+    fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi/visits")
+    .then(res => res.json())
+    .then(res => {
+        document.getElementById("visitorCount").innerText =
+            "Pengunjung: " + res.value + " orang";
+    });
+
+}
+
+updateVisitorCount();
+</script>
 
 </script>
 
