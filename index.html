@@ -162,8 +162,8 @@ Termahal
 
 </div>
 <div class="stock" id="totalStock">Tersedia: 0 nomor</div>
-<div id="visitorCount" style="text-align:center;">
-Pengunjung: loading...
+<div>
+Pengunjung: <span id="busuanzi_value_site_pv">0</span>
 </div>
 <div class="container" id="container">
 
@@ -496,28 +496,7 @@ updateStockCount();
 
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi/visits")
-  .then(function(response){
-    return response.json();
-  })
-  .then(function(data){
-    var el = document.getElementById("visitorCount");
-    if(el){
-      el.innerText = "Pengunjung: " + data.value + " orang";
-    }
-  })
-  .catch(function(){
-    var el = document.getElementById("visitorCount");
-    if(el){
-      el.innerText = "Pengunjung: 0 orang";
-    }
-  });
-
-});
-</script>
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
