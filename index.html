@@ -497,8 +497,7 @@ updateStockCount();
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-
+function updateVisitorCount() {
     fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi/visits")
     .then(function(response) {
         return response.json();
@@ -509,10 +508,11 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .catch(function(error) {
         document.getElementById("visitorCount").innerText =
-            "Pengunjung: gagal dimuat";
+            "Pengunjung: " + error;
     });
+}
 
-});
+updateVisitorCount();
 </script>
 
 </body>
