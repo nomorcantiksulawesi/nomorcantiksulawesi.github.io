@@ -495,19 +495,24 @@ function updateStockCount() {
 updateStockCount();
 
 </script>
+
 <script>
-function updateVisitorCount() {
+document.addEventListener("DOMContentLoaded", function() {
 
     fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi/visits")
-    .then(res => res.json())
-    .then(res => {
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
         document.getElementById("visitorCount").innerText =
-            "Pengunjung: " + res.value + " orang";
+            "Pengunjung: " + data.value + " orang";
+    })
+    .catch(function(error) {
+        document.getElementById("visitorCount").innerText =
+            "Pengunjung: gagal dimuat";
     });
 
-}
-
-updateVisitorCount();
+});
 </script>
 
 </body>
