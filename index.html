@@ -497,13 +497,13 @@ updateStockCount();
 
 <script>
 fetch("https://api.countapi.xyz/hit/nomorcantiksulawesi.github.io/visits")
-  .then(res => res.json())
-  .then(res => {
+.then(res => res.json())
+.then(res => {
     document.getElementById("visits").innerText = res.value;
-  })
-  .catch(() => {
+})
+.catch(() => {
     document.getElementById("visits").innerText = "0";
-  });
+});
 </script>
 
 </body>
